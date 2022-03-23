@@ -25,6 +25,7 @@ func main() {
 		"admin": "adminpass",
 	}))
 	subRouterAuthenticated.GET("/:IdValue", GetMethod)
+	subRouterAuthenticated.POST("/:IdValue", GetMethod)
 	listenPort := "1357"
 
 	router.Run(":" + listenPort)
