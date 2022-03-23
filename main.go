@@ -11,7 +11,6 @@ func GetMethod(c *gin.Context) {
 	IdValue := c.Params.ByName("IdValue")
 	message := "GetMethod Called With Param: " + IdValue
 	c.JSON(http.StatusOK, message)
-	reqPayload := make([]byte, 1024)
 	reqPayload, err := c.GetRawData()
 	if err != nil {
 		fmt.Println(err)
